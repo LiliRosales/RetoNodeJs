@@ -1,0 +1,11 @@
+{
+  "name": "retonodejs",
+  "version": "1.0.0",
+  "description": "Reto NodeJs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Liliana Rosales MisionTic2022",
+  "license": "ISC"
+}
