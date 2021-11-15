@@ -11,3 +11,12 @@ Crear un nuevo paquete:
 
     Instalar paquetes 
         npm install express
+
+    Compilar para verificar funcionalidad 
+        node server.js
+
+    Instalar mongoose
+        npm i mongoose
+    
+    Para verificar la version del node
+        node -v
