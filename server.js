@@ -50,6 +50,31 @@ router.post('/Persona', (req, res)=>{
         res.send("Persona almacenada")
     })
 })
+
+//Eliminar persona
+router.delete('/Persona/:id', async(req,res) =>{
+    try{
+        console.log(req.body.id)
+        const DeletePersona = await PersonaSchema.findByIdAndDelete(req.body.id);
+        res.send(DeletePersona);
+    }catch(e){
+        res.status(500).send("No se pudo eliminar la persona");
+    }
+})
+
+// Actualizar persona 
+router.patch('/Persona/:id', async(req,res)=>{
+    try{
+        const _id = req.body.id
+        const UpdateRequest = await PersonaSchema.findByIdAndUpdate(_id, req.body)
+        res.send(UpdateRequest);
+        }
+        catch(e){
+            res.status(404).send("No se pudo actualizar la persona")
+        }
+})
+
+
 app.use(router);
 app.listen(3000, ()=>{
     console.log("Servidor corriendo en el puerto 3000")
